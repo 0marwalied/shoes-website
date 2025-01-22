@@ -1,0 +1,1257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  height: 200vh;
+  /* background-color: rgba(0, 0, 0, 0.705); */
+}
+
+/* Home page section */
+
+.home-page {
+  height: 100vh;
+  background-image: url(../images/p3.png);
+  background-position: center;
+  width: 100%;
+  position: relative;
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9%;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+}
+
+.nav-bar .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0% 10%;
+}
+
+/* Left */
+.nav-bar .container .left {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 100%;
+  flex-grow: 0.1;
+}
+
+.nav-bar .container .left .text {
+  text-transform: capitalize;
+  font-family: "Roboto Condensed", serif;
+  font-size: 27px;
+}
+
+.nav-bar .container .left .text .special {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Middle */
+.nav-bar .container .middle {
+  flex-grow: 1;
+  padding: 0% 10%;
+}
+
+.nav-bar .container .middle .categories {
+  display: flex;
+  list-style: none;
+  font-family: "Open Sans", serif;
+  justify-content: space-around;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.nav-bar .container .middle .categories [href="#"] {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar .container .middle .categories .categorie {
+  position: relative;
+  padding: 7px 7px;
+}
+
+.nav-bar .container .middle .categories .categorie::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  transition: 0.5s;
+}
+
+.nav-bar .container .middle .categories .categorie::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 0%;
+  transition: 0.5s;
+}
+
+.nav-bar .container .middle .categories .categorie:hover::after {
+  width: 100%;
+  background-color: #2eb370;
+}
+
+.nav-bar .container .middle .categories .categorie:hover::before {
+  width: 100%;
+  background-color: #2eb370;
+}
+
+.nav-bar .container .middle .categories .categorie .animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 2px;
+  transition: 0.5s;
+}
+
+.nav-bar .container .middle .categories .categorie .animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0%;
+  width: 2px;
+  transition: 0.5s;
+}
+
+.nav-bar .container .middle .categories .categorie:hover .animation::after {
+  height: 100%;
+  background-color: #2eb370;
+}
+
+.nav-bar .container .middle .categories .categorie:hover .animation::before {
+  height: 100%;
+  background-color: #2eb370;
+}
+
+.nav-bar .container .middle .categories .categorie:hover [href="#"] {
+  color: #2eb370;
+}
+
+.nav-bar .container .middle .categories .pages .container {
+  position: absolute;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 350px;
+  height: 250px;
+  padding: 20px 10px;
+  align-items: start;
+  transition: 0.8s;
+  transform: translate(-40%, 10%) scale(0);
+}
+
+.nav-bar .container .middle .categories .pages .container .pages {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.nav-bar .container .middle .categories .pages .container .blog {
+  display: flex;
+  height: 60%;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.nav-bar .container .middle .categories .pages .container .lined {
+  padding-bottom: 8px;
+  border-bottom: 2px dotted black;
+  width: fit-content;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar .container .middle .categories .pages .container .item {
+  transition: 0.3s;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-bar .container .middle .categories .pages .container .item:hover {
+  transform: scale(1.07);
+  color: #2eb370;
+}
+
+.nav-bar .container .middle .categories .pages:hover .container {
+  transform: translate(-40%, 10%) scale(1);
+}
+
+/* Right */
+.nav-bar .container .right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-bar .container .right [href="#"] {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.nav-bar .container .right .icon {
+  position: relative;
+}
+
+.nav-bar .container .right .notification {
+  background-color: #2eb370;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.3s;
+  font-size: 14px;
+  top: -50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.nav-bar .container .right .icon:hover {
+  color: #2eb370;
+}
+
+.nav-bar .container .right .icon:hover .notification {
+  top: -65%;
+}
+
+/* Sale bar */
+.sale-bar {
+  height: 5%;
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sale-bar .content {
+  word-spacing: 2px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.sale-bar .content .special {
+  text-decoration: none;
+  display: inline-block;
+  color: #d0bb86;
+  border-bottom: 1px solid #d0bb86;
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+.sale-bar .content .special:hover {
+  transform: scaleX(1.1);
+}
+
+/* Home page contenet */
+
+.home-page-content {
+  position: absolute;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 20px 20px;
+  width: 550px;
+  height: 450px;
+  top: 25%;
+  left: 5%;
+}
+
+.home-page-content .name {
+  font-family: "Playwrite AU SA", serif;
+  font-size: 38px;
+  color: #2eb370;
+}
+
+.home-page-content .title {
+  font-size: 48px;
+}
+
+.home-page-content .about {
+  font-size: 17px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.678);
+}
+
+.home-page-content .shop-btn {
+  height: 60px;
+  width: 150px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: black;
+  border: none;
+}
+
+.home-page-content .shop-btn a {
+  color: white;
+  font-weight: 500;
+  transition: 0.7s;
+}
+
+.home-page-content .shop-btn:hover {
+  background-color: inherit;
+  border: 1px solid black;
+}
+
+.home-page-content .shop-btn:hover a {
+  color: black;
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+/* product categories section */
+
+.products-categories {
+  height: 65vh;
+  background-color: white;
+  padding: 3% 6%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-categories .product {
+  width: 30%;
+  height: 100%;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: center;
+  transition: all 1s;
+}
+
+.products-categories .man {
+  background-image: url(../images/product1.jpg);
+}
+
+.products-categories .women {
+  background-image: url(../images/product2.jpg);
+}
+
+.products-categories .baby {
+  background-image: url(../images/product3.jpg);
+}
+
+.products-categories .product .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.08);
+}
+
+.products-categories .product:hover {
+  background-size: 120%;
+}
+
+.products-categories .product .content {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-weight: bold;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  top: 80%;
+  transition: 1s;
+}
+
+.products-categories .product .content .title {
+  font-size: 2rem;
+}
+
+.products-categories .product .content .buy {
+  color: #d0bb86;
+  font-size: 1.5rem;
+  border-bottom: 3px solid #d0bb86;
+  padding-bottom: 3px;
+}
+
+.products-categories .product:hover .content {
+  top: 10%;
+  height: 80%;
+}
+
+.products-categories .product:hover .content .buy {
+  transition: 0.5s;
+}
+
+.products-categories .product .content .buy:hover {
+  transform: scale(1.1);
+}
+
+/* trending products section */
+
+.trending-products {
+  height: 100vh;
+  background-color: white;
+  padding: 3% 6%;
+}
+
+.trending-products .categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trending-products .categories .title {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.trending-products .categories .categories-container {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.trending-products .categories .categories-container [href="#"] {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.trending-products .categories .categories-container .special {
+  color: #2eb370;
+  position: relative;
+}
+
+.trending-products .categories .categories-container .special::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: #2eb370;
+  width: 100%;
+  top: 61px;
+  left: 0;
+}
+
+.trending-products .line {
+  background-color: rgba(0, 0, 0, 0.479);
+  height: 2px;
+  margin-top: 30px;
+}
+
+.trending-products .items {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.trending-products .items .item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 480px;
+  justify-content: space-between;
+}
+
+.trending-products .items .item-container .item {
+  display: flex;
+  align-items: center;
+  height: 380px;
+  width: 305px;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+
+.trending-products .items .prev {
+  position: absolute;
+  left: -40px;
+}
+
+.trending-products .items .next {
+  position: absolute;
+  right: -40px;
+}
+
+.trending-products .items .item1 {
+  background-image: url(/images/f1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.trending-products .items .item2 {
+  background-image: url(/images/f2.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.trending-products .items .item3 {
+  background-image: url(/images/f3.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.trending-products .items .item4 {
+  background-image: url(/images/f4.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.trending-products .items .item-container .item .card {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+}
+
+.trending-products .items .item-container .item .card .face,
+.trending-products .items .item-container .item .card .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.trending-products .items .item-container .item .card .face {
+  backface-visibility: hidden;
+}
+
+.trending-products .items .item-container .item .card .back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.trending-products .items .item1 .card .back {
+  background-image: url(/images/b1.png);
+  background-size: cover;
+  background-position: center;
+}
+.trending-products .items .item2 .card .back {
+  background-image: url(/images/b2.png);
+  background-size: cover;
+  background-position: center;
+}
+.trending-products .items .item3 .card .back {
+  background-image: url(/images/b3.png);
+  background-size: cover;
+  background-position: center;
+}
+.trending-products .items .item4 .card .back {
+  background-image: url(/images/b4.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.trending-products .items .item-container .item:hover .card {
+  transform: rotateY(180deg);
+}
+
+.trending-products .items .item-container .item .card .icons {
+  position: absolute;
+  font-size: 30px;
+  bottom: 30px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(0);
+  transition: all 1s;
+}
+
+.trending-products .items .item:hover .card .icons {
+  transform: scale(1);
+}
+
+.trending-products .items .item-container .item .card .icons .icon {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.trending-products .items .item-container .item .card .icons .icon:hover {
+  background-color: #2eb370;
+  color: white;
+}
+
+.trending-products .items .item-container .name {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: bold;
+  width: 310px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 1s;
+}
+
+.trending-products .items .item-container .price {
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* customer testimonial section */
+
+.customer-testimonial {
+  height: 60vh;
+  width: 100%;
+  padding: 0% 6%;
+  background-color: #f3fefe;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.customer-testimonial .arrow {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.customer-testimonial .container {
+  height: 100%;
+  width: 60%;
+  text-align: center;
+  padding: 20px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.customer-testimonial .container .title {
+  font-size: 2.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.customer-testimonial .container .content {
+  font-size: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.customer-testimonial .container .writer {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.customer-testimonial .container .writer .photo {
+  background-image: url(/images/me.png);
+  background-size: cover;
+  background-position: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.customer-testimonial .container .writer .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 65%;
+}
+
+.customer-testimonial .container .writer .about .name {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.customer-testimonial .container .writer .about .jop {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* you may like section */
+
+.you-may-like-products {
+  height: 100vh;
+  background-color: white;
+  padding: 3% 6%;
+}
+
+.you-may-like-products .categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.you-may-like-products .categories .title {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.you-may-like-products .line {
+  background-color: rgba(0, 0, 0, 0.479);
+  height: 2px;
+  margin-top: 30px;
+}
+
+.you-may-like-products .items {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.you-may-like-products .items .item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 480px;
+  justify-content: space-between;
+}
+
+.you-may-like-products .items .item-container .item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  width: 305px;
+  background-color: rgba(0, 0, 0, 0.438);
+}
+
+.you-may-like-products .items .prev {
+  position: absolute;
+  left: -40px;
+}
+
+.you-may-like-products .items .next {
+  position: absolute;
+  right: -40px;
+}
+
+.you-may-like-products .items .item1 {
+  background-image: url(/images/a1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.you-may-like-products .items .item2 {
+  background-image: url(/images/a2.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.you-may-like-products .items .item3 {
+  background-image: url(/images/a3.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.you-may-like-products .items .item4 {
+  background-image: url(/images/a4.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.you-may-like-products .items .item-container .item .card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.you-may-like-products .items .item-container .item .card .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(0%, -100%);
+}
+
+.you-may-like-products .items .item-container .item .card .back {
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+}
+
+.you-may-like-products .items .item1 .card .back {
+  background-image: url(/images/l1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.you-may-like-products .items .item2 .card .back {
+  background-image: url(/images/l2.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.you-may-like-products .items .item3 .card .back {
+  background-image: url(/images/l3.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.you-may-like-products .items .item4 .card .back {
+  background-image: url(/images/l4.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.you-may-like-products .items .item-container .item:hover .card .back {
+  transform: translate(0%, 0%);
+}
+
+.you-may-like-products .items .item-container .item .card .icons {
+  position: absolute;
+  font-size: 30px;
+  bottom: 30px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(0);
+  transition: all 1s;
+}
+
+.you-may-like-products .items .item:hover .card .icons {
+  transform: scale(1);
+}
+
+.you-may-like-products .items .item-container .item .card .icons .icon {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.you-may-like-products .items .item-container .item .card .icons .icon:hover {
+  background-color: #2eb370;
+  color: white;
+}
+
+.you-may-like-products .items .item-container .name {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: bold;
+  width: 310px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 1s;
+}
+
+.you-may-like-products .items .item-container .price {
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* latest news section */
+
+.latest-news {
+  height: 100vh;
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: #f3fefe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 6%;
+}
+
+.latest-news .news-title {
+  font-size: 2.6rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.latest-news .big-container {
+  height: 88%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-news .container {
+  height: 100%;
+  width: 30%;
+}
+
+.latest-news .container .item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.latest-news .container .item .photo {
+  width: 100%;
+  height: 65%;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.latest-news .container .item .photo1 {
+  background-image: url(/images/t1.jpg);
+}
+
+.latest-news .container .item .photo2 {
+  background-image: url(/images/t2.jpg);
+}
+
+.latest-news .container .item .photo3 {
+  background-image: url(/images/t3.jpg);
+}
+
+.latest-news .container .item .name {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.05rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.latest-news .container .item .title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.7s;
+}
+
+.latest-news .container .item .about {
+  font-size: 1.05rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.latest-news .container .item .click {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: all 0.3s;
+}
+
+.latest-news .container:hover .title {
+  color: #2eb370;
+}
+
+.latest-news .container .photo:hover {
+  transform: scale(1.03);
+}
+
+.latest-news .container .click:hover {
+  transform: scale(1.03);
+}
+
+/* options section */
+
+.options {
+  height: 40vh;
+  width: 100%;
+  padding: 0% 6%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.options .option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.options .option .icon-container {
+  position: relative;
+  width: 80px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.options .option .icon-container .front,
+.options .option .icon-container .back {
+  font-size: 3.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.35s;
+}
+
+.options .option .icon-container .back {
+  transform: translate(-50%, 200%);
+  color: black;
+}
+
+.options .option .icon-container:hover .front {
+  transform: translate(-50%, -200%);
+}
+
+.options .option .icon-container:hover .back {
+  transform: translate(-50%, -50%);
+}
+
+.options .option .title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.options .option .about {
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* footer section */
+
+.page-end {
+  height: 70vh;
+  width: 100%;
+  background-color: #181614;
+  padding: 1% 6%;
+}
+
+.page-end .parts-container {
+  height: 100%;
+  width: 100%;
+}
+
+.page-end .parts-container .part1 {
+  color: white;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-end .parts-container .part1 .subscribe-container {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page-end .parts-container .part1 .subscribe-container .title {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.page-end .parts-container .part1 .subscribe-container .info {
+  font-size: 1.08rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.page-end .parts-container .part1 .email-container {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.page-end .parts-container .part1 .email-container .email-input {
+  width: 70%;
+  font-size: 1.4rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-left: 10px;
+  border: none;
+}
+
+.page-end .parts-container .part1 .email-container .click {
+  color: white;
+  background-color: #2eb370;
+  width: 25%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border: none;
+  transition: all 0.3s;
+}
+
+.page-end .parts-container .part1 .email-container .click:hover {
+  transform: scale(1.08);
+}
+
+.page-end .parts-container .part1 .icon-container {
+  display: flex;
+  height: 50%;
+  width: 10%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.page-end .parts-container .part1 .icon-container .icon {
+  color: #657f8c;
+  font-size: 1.7rem;
+  transition: all 0.4s;
+}
+
+.page-end .parts-container .part1 .icon-container .icon:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.page-end .parts-container .part2 {
+  width: 100%;
+  height: 70%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+}
+
+.page-end .parts-container .part2 .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 10%;
+}
+
+.page-end .parts-container .part2 .text {
+  text-transform: capitalize;
+  font-family: "Roboto Condensed", serif;
+  font-size: 27px;
+}
+
+.page-end .parts-container .part2 .text .special {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.page-end .parts-container .part2 .click {
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page-end .parts-container .part2 .click:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.page-end .parts-container .part2 .main {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+}
+
+.page-end .parts-container .part3 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12%;
+}
+
+.page-end .parts-container .part3 .special {
+  color: #2eb370;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.page-end .parts-container .part3 .heart {
+  font-size: 1.2rem;
+  animation: heart 0.4s alternate infinite;
+}
+
+@keyframes heart {
+  0% {
+    color: black;
+  }
+  100% {
+    color: #2eb370;
+    transform: scale(1.2);
+  }
+}

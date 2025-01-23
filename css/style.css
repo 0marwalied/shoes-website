@@ -517,25 +517,25 @@ body {
 }
 
 .trending-products .items .item1 {
-  background-image: url(/images/f1.png);
+  background-image: url(../images/f1.png);
   background-position: center;
   background-size: cover;
 }
 
 .trending-products .items .item2 {
-  background-image: url(/images/f2.png);
+  background-image: url(../images/f2.png);
   background-position: center;
   background-size: cover;
 }
 
 .trending-products .items .item3 {
-  background-image: url(/images/f3.png);
+  background-image: url(../images/f3.png);
   background-position: center;
   background-size: cover;
 }
 
 .trending-products .items .item4 {
-  background-image: url(/images/f4.png);
+  background-image: url(../images/f4.png);
   background-position: center;
   background-size: cover;
 }
@@ -567,22 +567,22 @@ body {
 }
 
 .trending-products .items .item1 .card .back {
-  background-image: url(/images/b1.png);
+  background-image: url(../images/b1.png);
   background-size: cover;
   background-position: center;
 }
 .trending-products .items .item2 .card .back {
-  background-image: url(/images/b2.png);
+  background-image: url(../images/b2.png);
   background-size: cover;
   background-position: center;
 }
 .trending-products .items .item3 .card .back {
-  background-image: url(/images/b3.png);
+  background-image: url(../images/b3.png);
   background-size: cover;
   background-position: center;
 }
 .trending-products .items .item4 .card .back {
-  background-image: url(/images/b4.png);
+  background-image: url(../images/b4.png);
   background-size: cover;
   background-position: center;
 }
@@ -689,7 +689,7 @@ body {
 }
 
 .customer-testimonial .container .writer .photo {
-  background-image: url(/images/me.png);
+  background-image: url(../images/me.png);
   background-size: cover;
   background-position: center;
   width: 90px;
@@ -786,25 +786,25 @@ body {
 }
 
 .you-may-like-products .items .item1 {
-  background-image: url(/images/a1.png);
+  background-image: url(../images/a1.png);
   background-position: center;
   background-size: cover;
 }
 
 .you-may-like-products .items .item2 {
-  background-image: url(/images/a2.jpeg);
+  background-image: url(../images/a2.jpeg);
   background-position: center;
   background-size: cover;
 }
 
 .you-may-like-products .items .item3 {
-  background-image: url(/images/a3.png);
+  background-image: url(../images/a3.png);
   background-position: center;
   background-size: cover;
 }
 
 .you-may-like-products .items .item4 {
-  background-image: url(/images/a4.png);
+  background-image: url(../images/a4.png);
   background-position: center;
   background-size: cover;
 }
@@ -831,25 +831,25 @@ body {
 }
 
 .you-may-like-products .items .item1 .card .back {
-  background-image: url(/images/l1.png);
+  background-image: url(../images/l1.png);
   background-size: cover;
   background-position: center;
 }
 
 .you-may-like-products .items .item2 .card .back {
-  background-image: url(/images/l2.jpeg);
+  background-image: url(../images/l2.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 .you-may-like-products .items .item3 .card .back {
-  background-image: url(/images/l3.png);
+  background-image: url(../images/l3.png);
   background-size: cover;
   background-position: center;
 }
 
 .you-may-like-products .items .item4 .card .back {
-  background-image: url(/images/l4.png);
+  background-image: url(../images/l4.png);
   background-size: cover;
   background-position: center;
 }
@@ -956,15 +956,15 @@ body {
 }
 
 .latest-news .container .item .photo1 {
-  background-image: url(/images/t1.jpg);
+  background-image: url(../images/t1.jpg);
 }
 
 .latest-news .container .item .photo2 {
-  background-image: url(/images/t2.jpg);
+  background-image: url(../images/t2.jpg);
 }
 
 .latest-news .container .item .photo3 {
-  background-image: url(/images/t3.jpg);
+  background-image: url(../images/t3.jpg);
 }
 
 .latest-news .container .item .name {
